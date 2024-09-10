@@ -80,5 +80,30 @@
         var_dump($z);
         echo '<br>';
     ?>
+    <h2>Ejercicio 4</h2>
+    <p>Lee y muestra los valores de las variables del ejercicio anterior,<br> pero ahora con la ayuda de
+    a matriz $GLOBALS o del modificador global de PHP.</p>
+    <?php
+            var_dump($GLOBALS['a']);
+            echo '<br>';
+        
+            var_dump($GLOBALS['z']);
+            echo '<br>';
+        
+            var_dump($GLOBALS['b']);
+            echo '<br>';
+        
+            var_dump($GLOBALS['c']);
+            echo '<br>';
+        
+            var_dump($GLOBALS['a']);
+            echo '<br>';
+        
+            var_dump($GLOBALS['b']);
+            echo '<br>';
+        
+            var_dump($GLOBALS['z']);
+            echo '<br>';
+    ?>
 </body>
 </html>
