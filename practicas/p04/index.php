@@ -58,32 +58,39 @@
         arreglo):
     </p>
     <?php
-        $a = "PHP5";
-        var_dump($a);
-        echo '<br>';
-        $z[] = &$a;
-        var_dump($z);
-        echo '<br>';
-        $b = "5a version de PHP";
-        var_dump($b);
-        echo '<br>';
-        $c = $b*10;
-        var_dump($c);
-        echo '<br>';
-        $a .= $b;
-        var_dump($a);
-        echo '<br>';
-        $b *= $c;
-        var_dump($b);
-        echo '<br>';
-        $z[0] = "MySQL";
-        var_dump($z);
-        echo '<br>';
+        // $a = "PHP5";
+        // var_dump($a);
+        // echo '<br>';
+        // $z[] = &$a;
+        // var_dump($z);
+        // echo '<br>';
+        // $b = "5a version de PHP";
+        // var_dump($b);
+        // echo '<br>';
+        // $c = $b*10;
+        // var_dump($c);
+        // echo '<br>';
+        // $a .= $b;
+        // var_dump($a);
+        // echo '<br>';
+        // $b *= $c;
+        // var_dump($b);
+        // echo '<br>';
+        // $z[0] = "MySQL";
+        // var_dump($z);
+        // echo '<br>';
     ?>
     <h2>Ejercicio 4</h2>
     <p>Lee y muestra los valores de las variables del ejercicio anterior,<br> pero ahora con la ayuda de
     a matriz $GLOBALS o del modificador global de PHP.</p>
     <?php
+            $a = "PHP5";
+            $z[] = &$a;
+            $b = "5a version de PHP";
+            $c = $b * 10;
+            $a .= $b;
+            $b *= $c;
+            $z[0] = "MySQL";
             var_dump($GLOBALS['a']);
             echo '<br>';
         
@@ -105,5 +112,19 @@
             var_dump($GLOBALS['z']);
             echo '<br>';
     ?>
+    <h2>Ejercicio 5 </h2>
+    <p> Dar el valor de las variables $a, $b, $c al final del siguiente script: </p>
+    <p>$a = “7 personas”; <br> $b = (integer) $a; <br>$a = “9E3”; <br> $c = (double) $a; <br></p>
+    <?php
+    $a= "7 personas";
+    $b = (integer) $a; 
+    $a = "9E3";
+    $c = (double) $a;
+    echo $a;
+    echo $b;
+    echo $c;
+   
+    ?>
+
 </body>
 </html>
