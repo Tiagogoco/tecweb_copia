@@ -21,12 +21,12 @@
         echo '<h4>Respuesta:</h4>';   
     
         echo '<ul>';
-        echo '<li>$_myvar es válida porque inicia con guión bajo.</li>';
-        echo '<li>$_7var es válida porque inicia con guión bajo.</li>';
+        echo '<li>$_myvar es válida porque inicia con $ y guión bajo.</li>';
+        echo '<li>$_7var es válida porque inicia con $ y guión bajo.</li>';
         echo '<li>myvar es inválida porque no tiene el signo de dolar ($).</li>';
-        echo '<li>$myvar es válida porque inicia con una letra.</li>';
-        echo '<li>$var7 es válida porque inicia con una letra.</li>';
-        echo '<li>$_element1 es válida porque inicia con guión bajo.</li>';
+        echo '<li>$myvar es válida porque inicia con $ y una letra.</li>';
+        echo '<li>$var7 es válida porque inicia con $ y una letra.</li>';
+        echo '<li>$_element1 es válida porque inicia con $ y guión bajo.</li>';
         echo '<li>$house*5 es inválida porque el símbolo * no está permitido.</li>';
         echo '</ul>';
     ?>
@@ -123,6 +123,7 @@
         
             var_dump($GLOBALS['z']);
             echo '<br>';
+            unset($a, $b, $c);
     ?>
     <h2>Ejercicio 5 </h2>
     <p> Dar el valor de las variables $a, $b, $c al final del siguiente script: </p>
