@@ -33,6 +33,7 @@
     <h2>Ejercicio 2</h2>
     <p>Proporcionar los valores de $a, $b, $c como sigue:</p>
     <?php
+        echo '<h4>Respuesta:</h4>';
         $a = "ManejadorSQL";
         $b = 'MySQL';
         $c = &$a;
@@ -57,33 +58,44 @@
         verificar la evolución del tipo de estas variables (imprime todos los componentes de los
         arreglo):
     </p>
+    <p>
+        $a = “PHP5”; <br>
+        $z[] = &$a; <br>
+        $b = “5a version de PHP”; <br>
+        $c = $b*10; <br>
+        $a .= $b; <br>
+        $b *= $c; <br>
+        $z[0] = “MySQL”; <br>
+    </p>
     <?php
-        // $a = "PHP5";
-        // var_dump($a);
-        // echo '<br>';
-        // $z[] = &$a;
-        // var_dump($z);
-        // echo '<br>';
-        // $b = "5a version de PHP";
-        // var_dump($b);
-        // echo '<br>';
-        // $c = $b*10;
-        // var_dump($c);
-        // echo '<br>';
-        // $a .= $b;
-        // var_dump($a);
-        // echo '<br>';
-        // $b *= $c;
-        // var_dump($b);
-        // echo '<br>';
-        // $z[0] = "MySQL";
-        // var_dump($z);
-        // echo '<br>';
+        echo '<h4>Respuesta:</h4>';
+        $a = "PHP5";
+        var_dump($a);
+        echo '<br>';
+        $z[] = &$a;
+        var_dump($z);
+        echo '<br>';
+        $b = "5a version de PHP";
+        var_dump($b);
+        echo '<br>';
+        $c = $b*10;
+        var_dump($c);
+        echo '<br>';
+        $a .= $b;
+        var_dump($a);
+        echo '<br>';
+        $b *= $c;
+        var_dump($b);
+        echo '<br>';
+        $z[0] = "MySQL";
+        var_dump($z);
+        echo '<br>';
     ?>
     <h2>Ejercicio 4</h2>
     <p>Lee y muestra los valores de las variables del ejercicio anterior,<br> pero ahora con la ayuda de
     a matriz $GLOBALS o del modificador global de PHP.</p>
     <?php
+            echo '<h4>Respuesta:</h4>';
             $a = "PHP5";
             $z[] = &$a;
             $b = "5a version de PHP";
@@ -116,14 +128,67 @@
     <p> Dar el valor de las variables $a, $b, $c al final del siguiente script: </p>
     <p>$a = “7 personas”; <br> $b = (integer) $a; <br>$a = “9E3”; <br> $c = (double) $a; <br></p>
     <?php
+    echo '<h4>Respuesta:</h4>';
     $a= "7 personas";
     $b = (integer) $a; 
     $a = "9E3";
-    $c = (double) $a;
-    echo $a;
-    echo $b;
-    echo $c;
+    $c = (double)$a;
+    echo $a .'<br>';
+    echo $b .'<br>';
+    echo $c .'<br>';
    
+    ?>
+    <h2>Ejercicio 6</h2>
+    <p>Dar y comprobar el valor booleano de las variables $a, $b, $c, $d, $e y $f  <br> y muéstralas
+    usando la función var_dump(<datos>).</p>
+    <p>Después investiga una función de PHP que permita transformar el valor booleano de <br> $c y $e
+    en uno que se pueda mostrar con un echo:</p>
+    <p>$a = “0”;<br>
+        $b = “TRUE”; <br>
+        $c = FALSE; <br>
+        $d = ($a OR $b); <br>
+        $e = ($a AND $c); <br>
+        $f = ($a XOR $b); <br>
+    </p>
+    <?php
+        $a = "0";    
+        var_dump($a);  
+        echo '<br>';
+        $b = "TRUE";    
+        var_dump($b);
+        echo '<br>';
+        $c = FALSE;  
+        var_dump($c);  
+        echo '<br>'; 
+        $d = ($a OR $b);  
+        var_dump($d);
+        echo '<br>';
+        $e = ($a AND $c); 
+        var_dump($e);
+        echo '<br>';
+        $f = ($a XOR $b); 
+        var_dump($f);
+        echo '<br>';
+        echo "Valor booleano de c: " . var_export($c, true) . "<br>";
+        echo "Valor booleano de e: " . var_export($e, true) . "<br>";
+
+    ?>
+    <h2>Ejercicio 7</h2>
+    <p> Usando la variable predefinida $_SERVER, determina lo siguiente: <br>
+        a. La versión de Apache y PHP, <br>
+        b. El nombre del sistema operativo (servidor), <br>
+        c. El idioma del navegador (cliente). <br>
+    </p>
+    <?php
+        // a. Versión de Apache y PHP
+        echo "Versión de Apache: " . $_SERVER['SERVER_SOFTWARE'] . "<br>";
+        echo "Versión de PHP: " . phpversion() . "<br>";
+
+        // b. Nombre del sistema operativo (servidor)
+        echo "Sistema operativo del servidor: " . PHP_OS . "<br>";
+
+        // c. Idioma del navegador (cliente)
+        echo "Idioma del navegador del cliente: " . $_SERVER['HTTP_ACCEPT_LANGUAGE'] . "<br>";
     ?>
 
 </body>
