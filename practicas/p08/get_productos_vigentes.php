@@ -24,8 +24,8 @@
 			die('Falló la conexión: '.$link->connect_error.'<br/>');
 		}
 
-		/** Crear una tabla que no devuelve un conjunto de resultados */
-		if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope") ) 
+		/** Crear una tabla que solo devuelva los productos no eliminados y que cumplan con el tope */
+		if ( $result = $link->query("SELECT * FROM productos WHERE unidades <= $tope AND eliminado = 0") ) 
 		{
             /** Se extraen las tuplas obtenidas de la consulta */
 			$row = $result->fetch_all(MYSQLI_ASSOC);
@@ -54,7 +54,7 @@
 
 		<br/>
 		
-		<?php if( isset($row) ) : ?>
+		<?php if( isset($row) && count($row) > 0) : ?>
 			<table class="table">
 				<thead class="thead-dark">
 					<tr>
@@ -66,7 +66,7 @@
 						<th scope="col">Unidades</th>
 						<th scope="col">Detalles</th>
 						<th scope="col">Imagen</th>
-						<th scope="col">Eliminado</th> <!-- Agregar columna Eliminado -->
+						<th scope="col">Eliminado</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -80,17 +80,13 @@
 						<td><?= $value['unidades'] ?></td>
 						<td><?= $value['detalles'] ?></td>
 						<td><img src="<?= $value['imagen'] ?>" ></td>
-						<td><?= $value['eliminado'] ?></td> <!-- Mostrar valor de Eliminado -->
+						<td><?= $value['eliminado'] ?></td>
 					</tr>
 					<?php endforeach; ?>
 				</tbody>
 			</table>
-		<?php elseif(!empty($id)) : ?>
-
-			<script>
-                alert('El ID del producto no existe');
-            </script>
-
+		<?php elseif(isset($row)) : ?>
+			<p>No hay productos disponibles.</p>
 		<?php endif; ?>
 	</body>
 </html>
