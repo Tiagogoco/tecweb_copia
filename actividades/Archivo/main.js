@@ -258,6 +258,6 @@ function mostrarMensaje() {
                 case 3: return document.write("tres");
                 case 4: return document.write("cuatro");
                 case 5: return document.write("cinco");
-                default: return document.write("valor incorrecto");
+                default: return document.write("valor Incorrecto");
                 }
                 }
