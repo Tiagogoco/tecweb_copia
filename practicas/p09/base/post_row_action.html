@@ -71,11 +71,28 @@
             </tbody>
         </table>
         <script>
-            function send2form(name, age) {     //form) { 
-                var urlForm = "http://localhost/buap/tecweb/practicas/p07/formulario.php";
-                var propName = "nombre="+name;
-                var propAge = "edad="+age;
-                window.open(urlForm+"?"+propName+"&"+propAge);
+            function send2form(name, age) {
+                var form = document.createElement("form");
+
+                var nombreIn = document.createElement("input");
+                nombreIn.type = 'text';
+                nombreIn.name = 'nombre';
+                nombreIn.value = name;
+                form.appendChild(nombreIn);
+
+                var edadIn = document.createElement("input");
+                edadIn.type = 'text';
+                edadIn.name = 'edad';
+                edadIn.value = age;
+                form.appendChild(edadIn);
+
+                console.log(form);
+
+                form.method = 'POST';
+                form.action = 'http://localhost/tecweb_copia/practicas/p09/base/formulario.php';  
+
+                document.body.appendChild(form);
+                form.submit();
             }
         </script>
     </body>
