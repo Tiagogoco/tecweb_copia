@@ -39,7 +39,7 @@
     ?>
 
     <fieldset>
-        <form action="" method="post">
+        <form action="http://localhost/tecweb_copia/practicas/p09/update_producto.php?id=<?= $id?>" method="post">
             <!-- Los campos se rellenan con los valores del producto obtenido -->
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" id="nombre" value="<?= htmlspecialchars($producto['nombre']) ?>" required><br><br>
