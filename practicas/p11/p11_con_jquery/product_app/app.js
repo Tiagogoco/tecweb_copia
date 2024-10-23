@@ -6,18 +6,52 @@ var baseJSON = {
     "marca": "NA",
     "detalles": "NA",
     "imagen": "img/default.png"
-  };
+};
 
 function init() {
-    /**
-     * Convierte el JSON a string para poder mostrarlo
-     * ver: https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/JSON
-     */
-    var JsonString = JSON.stringify(baseJSON,null,2);
+    // Convierte el JSON a string para poder mostrarlo
+    var JsonString = JSON.stringify(baseJSON, null, 2);
     document.getElementById("description").value = JsonString;
 
     // SE LISTAN TODOS LOS PRODUCTOS
     listarProductos();
+}
+
+$(document).ready(function() {
+    cargarProductos();
+
+    // Manejo del formulario
+    $('#product-form').submit(agregarProducto);
+
+    // Manejo de búsqueda
+    $('#search').on('input', function() {
+        let query = $(this).val();
+        if (query.length > 0) {
+            buscarProducto(event); // Se pasa el evento
+        } else {
+            cargarProductos();
+        }
+    });
+});
+
+function cargarProductos() {
+    $.ajax({
+        url: './backend/product-list.php',
+        type: 'GET',
+        success: function(response) {
+            let productos = JSON.parse(response);
+            actualizarTabla(productos);
+        }
+    });
+}
+
+function actualizarTabla(productos) {
+    let tabla = $('#products'); // Cambiado a #products
+    tabla.empty(); // Limpia la tabla antes de agregar los nuevos productos
+    productos.forEach(producto => {
+        let fila = `<tr productId="${producto.id}"><td>${producto.id}</td><td>${producto.nombre}</td><td>${producto.descripcion}</td></tr>`;
+        tabla.append(fila); // Agrega la fila a la tabla
+    });
 }
 
 function listarProductos() {
@@ -25,11 +59,11 @@ function listarProductos() {
         url: './backend/product-list.php',
         type: 'GET',
         contentType: 'application/x-www-form-urlencoded',
-        success: function (response) {
+        success: function(response) {
             let productos = JSON.parse(response);
             if (Object.keys(productos).length > 0) {
                 let template = '';
-                productos.forEach(function (producto) {
+                productos.forEach(function(producto) {
                     let descripcion = `
                         <li>precio: ${producto.precio}</li>
                         <li>unidades: ${producto.unidades}</li>
@@ -67,7 +101,7 @@ function agregarProducto(e) {
         type: 'POST',
         data: productoJsonString,
         contentType: 'application/json;charset=UTF-8',
-        success: function (response) {
+        success: function(response) {
             let respuesta = JSON.parse(response);
             let template_bar = `
                 <li style="list-style: none;">status: ${respuesta.status}</li>
@@ -87,7 +121,7 @@ function eliminarProducto() {
             url: './backend/product-delete.php?id=' + id,
             type: 'GET',
             contentType: 'application/x-www-form-urlencoded',
-            success: function (response) {
+            success: function(response) {
                 let respuesta = JSON.parse(response);
                 let template_bar = `
                     <li style="list-style: none;">status: ${respuesta.status}</li>
@@ -101,7 +135,7 @@ function eliminarProducto() {
 }
 
 function buscarProducto(e) {
-    e.preventDefault();
+    e.preventDefault(); // Agregado para evitar el comportamiento predeterminado
 
     let search = $("#search").val();
 
@@ -109,12 +143,12 @@ function buscarProducto(e) {
         url: './backend/product-search.php?search=' + search,
         type: 'GET',
         contentType: 'application/x-www-form-urlencoded',
-        success: function (response) {
+        success: function(response) {
             let productos = JSON.parse(response);
             if (Object.keys(productos).length > 0) {
                 let template = '';
                 let template_bar = '';
-                productos.forEach(function (producto) {
+                productos.forEach(function(producto) {
                     let descripcion = `
                         <li>precio: ${producto.precio}</li>
                         <li>unidades: ${producto.unidades}</li>
