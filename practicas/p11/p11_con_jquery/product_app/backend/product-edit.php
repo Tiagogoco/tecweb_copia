@@ -14,6 +14,7 @@ if (!empty($producto)) {
 
     // Verificar que el id del producto existe en el JSON
     if (isset($jsonOBJ->id)) {
+        // SE ASUME QUE LOS DATOS YA FUERON VALIDADOS ANTES DE ENVIARSE
         $id = $jsonOBJ->id;
         $sql = "SELECT * FROM productos WHERE id = '{$id}' AND eliminado = 0";
         $result = $conexion->query($sql);
@@ -29,7 +30,7 @@ if (!empty($producto)) {
                         precio = {$jsonOBJ->precio},
                         detalles = '{$jsonOBJ->detalles}',
                         unidades = {$jsonOBJ->unidades},
-                        imagen = '{$jsonOBJ->imagenes}'
+                        imagenes = '{$jsonOBJ->imagen}'
                     WHERE id = '{$id}' AND eliminado = 0";
 
             // Ejecutar la consulta de actualización
