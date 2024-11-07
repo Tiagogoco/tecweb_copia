@@ -1,32 +1,19 @@
 <?php
-    include_once __DIR__.'/database.php';
+// Incluir el archivo de la clase Products, ajustando la ruta según la estructura de carpetas
+include_once __DIR__ . '/myapi/Products.php';
 
-    // SE CREA EL ARREGLO QUE SE VA A DEVOLVER EN FORMA DE JSON
-    $data = array();
-    // SE VERIFICA HABER RECIBIDO EL ID
-    if( isset($_GET['search']) ) {
-        $search = $_GET['search'];
-        // SE REALIZA LA QUERY DE BÚSQUEDA Y AL MISMO TIEMPO SE VALIDA SI HUBO RESULTADOS
-        $sql = "SELECT * FROM productos WHERE (id = '{$search}' OR nombre LIKE '%{$search}%' OR marca LIKE '%{$search}%' OR detalles LIKE '%{$search}%') AND eliminado = 0";
-        if ( $result = $conexion->query($sql) ) {
-            // SE OBTIENEN LOS RESULTADOS
-			$rows = $result->fetch_all(MYSQLI_ASSOC);
+// Verificamos si se ha recibido el parámetro de búsqueda
+if (isset($_GET['search'])) {
+    // Instanciamos el objeto de la clase Products
+    $product = new TECWEB\MYAPI\Products();
 
-            if(!is_null($rows)) {
-                // SE CODIFICAN A UTF-8 LOS DATOS Y SE MAPEAN AL ARREGLO DE RESPUESTA
-                foreach($rows as $num => $row) {
-                    foreach($row as $key => $value) {
-                        $data[$num][$key] = utf8_encode($value);
-                    }
-                }
-            }
-			$result->free();
-		} else {
-            die('Query Error: '.mysqli_error($conexion));
-        }
-		$conexion->close();
-    } 
-    
-    // SE HACE LA CONVERSIÓN DE ARRAY A JSON
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    // Llamamos al método search() y pasamos el parámetro de búsqueda
+    $product->search($_GET['search']);
+} else {
+    // Si no se recibe el parámetro de búsqueda, mostramos un mensaje de error
+    echo json_encode(
+        array('status' => 'error', 'message' => 'No se recibió el parámetro de búsqueda'),
+        JSON_PRETTY_PRINT
+    );
+}
 ?>

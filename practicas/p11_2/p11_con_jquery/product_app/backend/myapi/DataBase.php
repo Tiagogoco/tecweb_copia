@@ -5,7 +5,7 @@ abstract class DataBase {
     protected $conexion;
 
     // Constructor que establece la conexión con la base de datos
-    public function __construct($user = 'root', $pass = 'Capitan23', $db = 'marketzone', $host = 'localhost') {
+    public function __construct($db, $user, $pass, $host = 'localhost') {
         $this->conexion = @mysqli_connect($host, $user, $pass, $db);
 
         if (!$this->conexion) {
