@@ -3,6 +3,7 @@
 
     // SE CREA EL ARREGLO QUE SE VA A DEVOLVER EN FORMA DE JSON
     $data = array();
+
     // SE VERIFICA HABER RECIBIDO EL ID
     if( isset($_GET['search']) ) {
         $search = $_GET['search'];
