@@ -174,8 +174,6 @@ $(document).ready(function(){
         const element = $(this)[0].activeElement.parentElement.parentElement;
         const id = $(element).attr('productId');
         $.post('./backend/product-single.php', {id}, (response) => {
-            console.log(response);
-
             // SE CONVIERTE A OBJETO EL JSON OBTENIDO
             let product = JSON.parse(response);
             // SE INSERTAN LOS DATOS ESPECIALES EN LOS CAMPOS CORRESPONDIENTES
