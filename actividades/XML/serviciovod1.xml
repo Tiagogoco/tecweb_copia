@@ -1,0 +1,97 @@
+<CatalogoVOD>
+    <cuenta>
+        <correo>tiago@gmail.com</correo>
+        <perfiles>
+            <perfil>
+                <usuario>tiago</usuario>
+                <idioma>Español</idioma>
+            </perfil>
+            <perfil>
+                <usuario>blanca</usuario>
+                <idioma>Inglés</idioma>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero>
+                <nombre>Acción</nombre>
+                <titulo>
+                    <nombre>FANDF</nombre>
+                    <duracion>120</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Jhon Wick</nombre>
+                    <duracion>110</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Duro de Matar</nombre>
+                    <duracion>130</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Batman el caballero de la noche</nombre>
+                    <duracion>105</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Comedia</nombre>
+                <titulo>
+                    <nombre>Click</nombre>
+                    <duracion>90</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Nosotros Los nobles</nombre>
+                    <duracion>85</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Superbad</nombre>
+                    <duracion>100</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Qué Pasó ayer</nombre>
+                    <duracion>95</duracion>
+                </titulo>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero>
+                <nombre>Documental</nombre>
+                <titulo>
+                    <nombre>Hormigas en equipo</nombre>
+                    <duracion>60</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Astroworld</nombre>
+                    <duracion>75</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>The party Never Ends</nombre>
+                    <duracion>50</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Vida Salvaje</nombre>
+                    <duracion>55</duracion>
+                </titulo>
+            </genero>
+            <genero>
+                <nombre>Reality</nombre>
+                <titulo>
+                    <nombre>Master Chef</nombre>
+                    <duracion>45</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Kardashians</nombre>
+                    <duracion>40</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>Survivor</nombre>
+                    <duracion>50</duracion>
+                </titulo>
+                <titulo>
+                    <nombre>American Idol</nombre>
+                    <duracion>55</duracion>
+                </titulo>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>

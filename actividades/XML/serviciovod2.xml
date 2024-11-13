@@ -1,0 +1,38 @@
+<CatalogoVOD>
+    <cuenta correo="tiago@gmail.com">
+        <perfiles>
+            <perfil usuario="tiago" idioma="Español"/>
+            <perfil usuario="blanca" idioma="Inglés"/>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas>
+            <genero nombre="Acción">
+                <titulo nombre="FANDF" duracion="120"/>
+                <titulo nombre="Jhon Wick" duracion="110"/>
+                <titulo nombre="Duro de Matar" duracion="130"/>
+                <titulo nombre="Batman el caballero de la noche" duracion="105"/>
+            </genero>
+            <genero nombre="Comedia">
+                <titulo nombre="Click" duracion="90"/>
+                <titulo nombre="Nosotros Los nobles" duracion="85"/>
+                <titulo nombre="Superbad" duracion="100"/>
+                <titulo nombre="Qué Pasó ayer" duracion="95"/>
+            </genero>
+        </peliculas>
+        <programas>
+            <genero nombre="Documental">
+                <titulo nombre="Hormigas en equipo" duracion="60"/>
+                <titulo nombre="Astroworld" duracion="75"/>
+                <titulo nombre="The party Never Ends" duracion="50"/>
+                <titulo nombre="Vida Salvaje" duracion="55"/>
+            </genero>
+            <genero nombre="Reality">
+                <titulo nombre="Master Chef" duracion="45"/>
+                <titulo nombre="Kardashians" duracion="40"/>
+                <titulo nombre="Survivor" duracion="50"/>
+                <titulo nombre="American Idol" duracion="55"/>
+            </genero>
+        </programas>
+    </contenido>
+</CatalogoVOD>
