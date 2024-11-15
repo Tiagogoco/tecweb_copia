@@ -35,7 +35,7 @@ class Create extends DataBase {
             }
 
             $result->free();
-            // Cierra la conexion
+            // Cierra la conexionz
             $this->conexion->close();
         }
     }
