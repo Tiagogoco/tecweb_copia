@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE CatalogoVOD SYSTEM "serviciovod.xsd">
+<CatalogoVOD>
+    <cuenta correo="tony.stark@gmail.com">
+        <perfiles>
+            <perfil usuario="Robert Downey Jr." idioma="English"/>
+            <perfil usuario="Chris Evans" idioma="English"/>
+            <perfil usuario="Tiago Gomez Cordero" idioma="Español">
+                <gustos>
+                    <peliculas>
+                        <genero nombre="Ciencia Ficción">
+                            <titulo duracion="02:30:00">Interestelar</titulo>
+                            <titulo duracion="02:20:00">Blade Runner 2049</titulo>
+                        </genero>
+                        <genero nombre="Acción">
+                            <titulo duracion="02:10:00">Mad Max: Furia en el camino</titulo>
+                            <titulo duracion="02:30:00">Misión Imposible: Fallout</titulo>
+                        </genero>
+                    </peliculas>
+                    <programas>
+                        <genero nombre="Documentales">
+                            <titulo duracion="01:00:00">Planeta Tierra</titulo>
+                            <titulo duracion="00:45:00">Cosmos</titulo>
+                        </genero>
+                        <genero nombre="Anime">
+                            <titulo duracion="00:24:00">Ataque a los Titanes</titulo>
+                            <titulo duracion="00:24:00">Death Note</titulo>
+                        </genero>
+                    </programas>
+                </gustos>
+            </perfil>
+        </perfiles>
+    </cuenta>
+    <contenido>
+        <peliculas region="USA">
+            <genero nombre="Super Héroes">
+                <titulo duracion="02:04:00">Capitán América: El primer vengador</titulo>
+                <titulo duracion="02:06:00">Iron Man: El hombre de hierro</titulo>
+            </genero>
+            <genero nombre="Terror">
+                <titulo duracion="01:51:00">Halloween: La noche final</titulo>
+                <titulo duracion="01:42:00">El teléfono negro</titulo>
+            </genero>
+        </peliculas>
+        <series region="MEX">
+            <genero nombre="Comedia">
+                <titulo duracion="00:40:00">Friends</titulo>
+                <titulo duracion="00:40:00">The Big Bang Theory</titulo>
+            </genero>
+            <genero nombre="Drama Criminal">
+                <titulo duracion="00:45:00">Criminal Minds</titulo>
+                <titulo duracion="00:50:00">Dahmer</titulo>
+            </genero>
+        </series>
+    </contenido>
+</CatalogoVOD>
