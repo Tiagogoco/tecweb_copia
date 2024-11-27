@@ -9,23 +9,23 @@
             <perfil usuario="Tiago Gomez Cordero" idioma="Español">
                 <gustos>
                     <peliculas>
-                        <genero nombre="Ciencia Ficción">
-                            <titulo duracion="02:30:00">Interestelar</titulo>
-                            <titulo duracion="02:20:00">Gladiador</titulo>
+                        <genero nombre="Aventura">
+                            <titulo duracion="02:45:00">Jurassic Park</titulo>
+                            <titulo duracion="02:30:00">Piratas del Caribe</titulo>
                         </genero>
-                        <genero nombre="Acción">
-                            <titulo duracion="02:10:00">Star Wars II</titulo>
-                            <titulo duracion="02:30:00">Harry Potter y la piedra</titulo>
+                        <genero nombre="Drama">
+                            <titulo duracion="02:20:00">El Padrino</titulo>
+                            <titulo duracion="01:58:00">Forrest Gump</titulo>
                         </genero>
                     </peliculas>
                     <programas>
                         <genero nombre="Documentales">
-                            <titulo duracion="01:00:00">Transformers</titulo>
-                            <titulo duracion="00:45:00">Avengers</titulo>
+                            <titulo duracion="01:30:00">Nuestro Planeta</titulo>
+                            <titulo duracion="01:20:00">Vida Salvaje</titulo>
                         </genero>
-                        <genero nombre="Anime">
-                            <titulo duracion="00:24:00">Ataque a los Titanes</titulo>
-                            <titulo duracion="00:24:00">Death Note</titulo>
+                        <genero nombre="Comedia">
+                            <titulo duracion="00:30:00">Brooklyn Nine-Nine</titulo>
+                            <titulo duracion="00:30:00">Parks and Recreation</titulo>
                         </genero>
                     </programas>
                 </gustos>
@@ -34,23 +34,23 @@
     </cuenta>
     <contenido>
         <peliculas region="USA">
-            <genero nombre="Super Héroes">
-                <titulo duracion="02:04:00">Capitán América: El primer vengador</titulo>
-                <titulo duracion="02:06:00">Iron Man: El hombre de hierro</titulo>
+            <genero nombre="Ciencia Ficción">
+                <titulo duracion="02:15:00">Avatar</titulo>
+                <titulo duracion="02:10:00">Duna</titulo>
             </genero>
-            <genero nombre="Terror">
-                <titulo duracion="01:51:00">Halloween: La noche final</titulo>
-                <titulo duracion="01:42:00">El teléfono negro</titulo>
+            <genero nombre="Animación">
+                <titulo duracion="01:40:00">Toy Story</titulo>
+                <titulo duracion="01:35:00">Shrek</titulo>
             </genero>
         </peliculas>
         <series region="MEX">
-            <genero nombre="Comedia">
-                <titulo duracion="00:40:00">Friends</titulo>
-                <titulo duracion="00:40:00">The Big Bang Theory</titulo>
+            <genero nombre="Acción">
+                <titulo duracion="00:50:00">La Casa de Papel</titulo>
+                <titulo duracion="00:45:00">Narcos</titulo>
             </genero>
-            <genero nombre="Drama Criminal">
-                <titulo duracion="00:45:00">Criminal Minds</titulo>
-                <titulo duracion="00:50:00">Dahmer</titulo>
+            <genero nombre="Suspenso">
+                <titulo duracion="00:40:00">Stranger Things</titulo>
+                <titulo duracion="00:42:00">Black Mirror</titulo>
             </genero>
         </series>
     </contenido>
