@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="catalogovod.xsl"?>
 <CatalogoVOD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:noNamespaceSchemaLocation="serviciovod.xsd">
     <cuenta correo="tony.stark@gmail.com">
         <perfiles>
-            <perfil usuario="Robert Downey Jr." idioma="English"/>
-            <perfil usuario="Chris Evans" idioma="English"/>
+            <perfil usuario="Blanca Cordero" idioma="English"/>
+            <perfil usuario="Jose Herrera" idioma="English"/>
             <perfil usuario="Tiago Gomez Cordero" idioma="Español">
                 <gustos>
                     <peliculas>
                         <genero nombre="Ciencia Ficción">
                             <titulo duracion="02:30:00">Interestelar</titulo>
-                            <titulo duracion="02:20:00">Blade Runner 2049</titulo>
+                            <titulo duracion="02:20:00">Gladiador</titulo>
                         </genero>
                         <genero nombre="Acción">
-                            <titulo duracion="02:10:00">Mad Max: Furia en el camino</titulo>
-                            <titulo duracion="02:30:00">Misión Imposible: Fallout</titulo>
+                            <titulo duracion="02:10:00">Star Wars II</titulo>
+                            <titulo duracion="02:30:00">Harry Potter y la piedra</titulo>
                         </genero>
                     </peliculas>
                     <programas>
                         <genero nombre="Documentales">
-                            <titulo duracion="01:00:00">Planeta Tierra</titulo>
-                            <titulo duracion="00:45:00">Cosmos</titulo>
+                            <titulo duracion="01:00:00">Transformers</titulo>
+                            <titulo duracion="00:45:00">Avengers</titulo>
                         </genero>
                         <genero nombre="Anime">
                             <titulo duracion="00:24:00">Ataque a los Titanes</titulo>
